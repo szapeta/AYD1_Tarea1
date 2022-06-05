@@ -13,6 +13,12 @@ def main():
     return str(value1 + value2)
 
 
+@app.route('/div', methods=['POST'])
+def div():
+    value1 = request.json['value1']
+    value2 = request.json['value2']
+    return str(value1 / value2)
+
 if __name__ == '__main__':
     app.run(
         port=3000
